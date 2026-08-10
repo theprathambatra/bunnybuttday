@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#130b2e" />
+  <title>Birthday Countdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="landing-page">
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <div class="decor-layer decor-layer--back" aria-hidden="true">
+    <div class="balloon balloon--a"><span></span></div>
+    <div class="balloon balloon--b"><span></span></div>
+    <div class="balloon balloon--c"><span></span></div>
+    <div class="balloon balloon--d"><span></span></div>
+    <div class="ribbon ribbon--a"></div>
+    <div class="ribbon ribbon--b"></div>
+    <div class="party-hat party-hat--a"><i></i></div>
+    <div class="gift gift--a"><i></i><b></b></div>
+    <div class="gift gift--b"><i></i><b></b></div>
+  </div>
+
+  <main class="landing-shell">
+    <section class="glass-card countdown-card" aria-labelledby="pageTitle">
+      <div class="eyebrow">THE CLOCK IS TICKING</div>
+      <h1 id="pageTitle">Happy birthday hai kya ladder</h1>
+      <p class="subcopy" id="countdownMessage">Something ridiculous is waiting on the other side of midnight.</p>
+
+      <div class="countdown" aria-label="Birthday countdown">
+        <div class="time-card"><strong id="days">00</strong><span>Days</span></div>
+        <div class="time-separator">:</div>
+        <div class="time-card"><strong id="hours">00</strong><span>Hours</span></div>
+        <div class="time-separator">:</div>
+        <div class="time-card"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="time-separator">:</div>
+        <div class="time-card"><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+
+      <div class="actions">
+        <button class="button button--secondary" id="musicButton" type="button">
+          <span class="button-dot"></span>
+          <span id="musicButtonText">Play birthday music</span>
+        </button>
+        <button class="button button--primary" id="celebrateButton" type="button" disabled>
+          <span>Let's celebrate</span>
+          <span class="button-arrow">→</span>
+        </button>
+      </div>
+
+      <div class="lock-note" id="lockNote">
+        <span class="tiny-lock" aria-hidden="true"></span>
+        Celebration unlocks at 12:00 AM on 11 August in your timezone.
+      </div>
+    </section>
+
+    <div class="mouse-hint" aria-hidden="true">
+      <span>move around</span><i></i>
+    </div>
+  </main>
+
+  <div class="decor-layer decor-layer--front" aria-hidden="true">
+    <div class="streamer streamer--a"></div>
+    <div class="streamer streamer--b"></div>
+    <div class="streamer streamer--c"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="countdown.js"></script>
+</body>
+</html>

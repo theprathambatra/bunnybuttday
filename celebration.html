@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#120824" />
+  <title>Let's Celebrate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="celebration-page">
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <div class="curtain" id="curtain" aria-hidden="true">
+    <div class="curtain-panel curtain-panel--left"></div>
+    <div class="curtain-panel curtain-panel--right"></div>
+    <div class="curtain-center">
+      <div class="curtain-badge">11 · 08 · 2026</div>
+      <div class="curtain-title">THE PARTY IS READY</div>
+    </div>
+  </div>
+
+  <header class="party-nav">
+    <a class="mini-brand" href="#top">11 / 08</a>
+    <nav>
+      <a href="#cake">Cake</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#game">Game</a>
+      <a href="#memories">Memories</a>
+    </nav>
+    <button id="partyMusicButton" class="mini-music" type="button">Music: off</button>
+  </header>
+
+  <main id="top">
+    <section class="hero-section section-pad">
+      <div class="hero-orbit" aria-hidden="true">
+        <span class="orbit-ring orbit-ring--1"></span>
+        <span class="orbit-ring orbit-ring--2"></span>
+        <span class="orbit-dot orbit-dot--1"></span>
+        <span class="orbit-dot orbit-dot--2"></span>
+        <span class="orbit-dot orbit-dot--3"></span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">MIDNIGHT: SUCCESSFULLY UNLOCKED</p>
+        <h1>Okay fine.<br><span>It is your birthday.</span></h1>
+        <p class="hero-text">This is not a normal webpage. Consider it a small, unnecessarily over-engineered birthday universe built entirely because a plain “happy birthday” would have been boring.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#cake">Start the chaos</a>
+          <button class="button button--secondary" id="heroConfettiButton" type="button">Launch confetti</button>
+        </div>
+      </div>
+
+      <div class="hero-cake-scene" aria-hidden="true">
+        <div class="spotlight"></div>
+        <div class="display-cake">
+          <div class="cake-top"></div>
+          <div class="cake-layer cake-layer--1"></div>
+          <div class="cake-layer cake-layer--2"></div>
+          <div class="cake-icing"></div>
+          <div class="cake-candle candle-a"><i></i></div>
+          <div class="cake-candle candle-b"><i></i></div>
+          <div class="cake-candle candle-c"><i></i></div>
+        </div>
+        <div class="cake-shadow"></div>
+      </div>
+    </section>
+
+    <section class="marquee-strip" aria-label="Birthday marquee">
+      <div class="marquee-track">
+        <span>ONE DAY OLDER</span><i></i><span>STILL ICONIC</span><i></i><span>CAKE FIRST</span><i></i><span>QUESTIONS LATER</span><i></i>
+        <span>ONE DAY OLDER</span><i></i><span>STILL ICONIC</span><i></i><span>CAKE FIRST</span><i></i><span>QUESTIONS LATER</span><i></i>
+      </div>
+    </section>
+
+    <section class="section-pad cake-section" id="cake">
+      <div class="section-heading">
+        <p class="eyebrow">INTERACTION 01</p>
+        <h2>Make the wish properly.</h2>
+        <p>Light every candle, make a wish, then blow them all out. Clicking works too — microphones are optional drama.</p>
+      </div>
+
+      <div class="interactive-cake-card glass-card">
+        <div class="big-cake" id="bigCake" aria-label="Interactive birthday cake">
+          <div class="big-cake-candles">
+            <button class="interactive-candle" data-candle="0" aria-label="Candle 1"><span class="wick"></span><span class="flame"></span></button>
+            <button class="interactive-candle" data-candle="1" aria-label="Candle 2"><span class="wick"></span><span class="flame"></span></button>
+            <button class="interactive-candle" data-candle="2" aria-label="Candle 3"><span class="wick"></span><span class="flame"></span></button>
+            <button class="interactive-candle" data-candle="3" aria-label="Candle 4"><span class="wick"></span><span class="flame"></span></button>
+            <button class="interactive-candle" data-candle="4" aria-label="Candle 5"><span class="wick"></span><span class="flame"></span></button>
+          </div>
+          <div class="big-cake-top"></div>
+          <div class="big-cake-middle"><span class="drip drip-1"></span><span class="drip drip-2"></span><span class="drip drip-3"></span></div>
+          <div class="big-cake-bottom"></div>
+          <div class="big-cake-plate"></div>
+        </div>
+        <div class="cake-controls">
+          <div>
+            <strong id="candleStatus">0 / 5 candles lit</strong>
+            <span>Tap each candle to light it.</span>
+          </div>
+          <button class="button button--primary" id="wishButton" type="button" disabled>Make a wish</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad gift-section" id="gifts">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">INTERACTION 02</p>
+        <h2>Three boxes. No refunds.</h2>
+        <p>Open them in any order.</p>
+      </div>
+
+      <div class="gift-grid">
+        <button class="reveal-gift" data-message="May this year bring you the kind of happiness that makes ordinary Tuesdays feel suspiciously good.">
+          <span class="gift-lid"></span><span class="gift-box-body"></span><span class="gift-ribbon-v"></span><span class="gift-ribbon-h"></span>
+          <span class="gift-label">OPEN ME</span>
+        </button>
+        <button class="reveal-gift" data-message="May every plan that deserves to work, work — and every terrible idea at least become a great story.">
+          <span class="gift-lid"></span><span class="gift-box-body"></span><span class="gift-ribbon-v"></span><span class="gift-ribbon-h"></span>
+          <span class="gift-label">NO, ME</span>
+        </button>
+        <button class="reveal-gift" data-message="And obviously: more cake, more trips, more wins, more laughter and significantly fewer boring people.">
+          <span class="gift-lid"></span><span class="gift-box-body"></span><span class="gift-ribbon-v"></span><span class="gift-ribbon-h"></span>
+          <span class="gift-label">LAST ONE</span>
+        </button>
+      </div>
+      <div class="gift-message glass-card" id="giftMessage">Pick a box. I dare you.</div>
+    </section>
+
+    <section class="section-pad game-section" id="game">
+      <div class="section-heading">
+        <p class="eyebrow">INTERACTION 03</p>
+        <h2>Pop the birthday balloons.</h2>
+        <p>There are 12. The last one triggers something unnecessarily dramatic.</p>
+      </div>
+      <div class="balloon-game glass-card">
+        <div class="game-topline"><span>Balloon demolition</span><strong id="popCounter">0 / 12</strong></div>
+        <div id="balloonArena" class="balloon-arena" aria-label="Balloon popping game"></div>
+        <button class="button button--secondary" id="resetBalloons" type="button">Reset balloons</button>
+      </div>
+    </section>
+
+    <section class="section-pad memories-section" id="memories">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">EVIDENCE FROM THE ARCHIVES</p>
+        <h2>Some memories deserve to be messed with.</h2>
+        <p>Drag the photos around. Tap one to open it. Flip it for the note hiding on the back.</p>
+      </div>
+
+      <div class="memory-desk" id="memoryDesk" aria-label="Interactive photo memories">
+        <button class="memory-card memory-card--1" type="button" data-photo="images/photo1_final.jpg" data-caption="one for the archives" data-note="Some pictures are too good to ever leave the camera roll.">
+          <span class="memory-tape"></span>
+          <span class="memory-image-wrap"><img src="images/photo1_final.jpg" alt="Birthday memory with friends" loading="lazy"></span>
+          <span class="memory-caption">one for the archives</span>
+        </button>
+
+        <button class="memory-card memory-card--2" type="button" data-photo="images/photo2_final.jpg" data-caption="zero context required" data-note="No explanation. No defence. Just evidence.">
+          <span class="memory-tape"></span>
+          <span class="memory-image-wrap"><img src="images/photo2_final.jpg" alt="Funny memory with friends" loading="lazy"></span>
+          <span class="memory-caption">zero context required</span>
+        </button>
+
+        <button class="memory-card memory-card--3" type="button" data-photo="images/photo3_final.jpg" data-caption="proof this happened" data-note="A very convincing argument for doing more ridiculous things together.">
+          <span class="memory-tape"></span>
+          <span class="memory-image-wrap"><img src="images/photo3_final.jpg" alt="Kayaking memory with friends" loading="lazy"></span>
+          <span class="memory-caption">proof this happened</span>
+        </button>
+
+        <button class="memory-card memory-card--4" type="button" data-photo="images/photo4_final.jpg" data-caption="still a classic" data-note="Keep collecting days that end up looking like this.">
+          <span class="memory-tape"></span>
+          <span class="memory-image-wrap"><img src="images/photo4_final.jpg" alt="Outdoor group memory" loading="lazy"></span>
+          <span class="memory-caption">still a classic</span>
+        </button>
+      </div>
+
+      <div class="memory-instructions" aria-hidden="true">
+        <span>DRAG</span><span>OPEN</span><span>FLIP</span>
+      </div>
+    </section>
+
+    <div class="memory-modal" id="memoryModal" aria-hidden="true">
+      <button class="memory-modal__close" id="memoryClose" type="button" aria-label="Close memory">×</button>
+      <div class="memory-flip" id="memoryFlip" tabindex="0" role="button" aria-label="Flip memory card">
+        <div class="memory-flip__inner">
+          <article class="memory-flip__face memory-flip__front">
+            <img id="memoryModalImage" src="" alt="Selected birthday memory">
+            <p id="memoryModalCaption"></p>
+            <span class="memory-flip-hint">tap to flip ↻</span>
+          </article>
+          <article class="memory-flip__face memory-flip__back">
+            <p class="eyebrow">THE NOTE ON THE BACK</p>
+            <p class="memory-secret" id="memoryModalNote"></p>
+            <span class="memory-flip-hint">tap to see the photo ↻</span>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-pad finale-section">
+      <div class="finale-card glass-card">
+        <p class="eyebrow">FINAL BUTTON. DEFINITELY SAFE.</p>
+        <h2>One more thing.</h2>
+        <p>Pressing this button may result in dramatic lighting, excessive confetti and a legally questionable amount of celebration.</p>
+        <button class="button button--primary button--giant" id="finaleButton" type="button">DO THE BIRTHDAY THING</button>
+        <div class="finale-message" id="finaleMessage" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="party-footer">
+    <span>Built with unreasonable birthday energy.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="celebration.js"></script>
+</body>
+</html>
