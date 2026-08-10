@@ -26,7 +26,7 @@ window.BIRTHDAY_CONFIG = {
 
   // Development-only switch. Leave FALSE when publishing.
   // Set true temporarily if you want to test the celebration page early.
-  devPreviewUnlocked: true,
+  devPreviewUnlocked: false,
 
   // Text you can personalize quickly.
   landingHeadline: "Happy birthday aagya kya bunny boyyy",
