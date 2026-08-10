@@ -105,7 +105,7 @@
     const n = litCount();
     candleStatus.textContent = `${n} / ${candles.length} candles lit`;
     wishButton.disabled = n !== candles.length;
-    if (n === candles.length) candleStatus.textContent = 'All candles lit — wish time.';
+    if (n === candles.length) candleStatus.textContent = 'Blowwww timeeee ahhh';
   }
 
   candles.forEach(c => c.addEventListener('click', () => {
@@ -116,7 +116,7 @@
   wishButton.addEventListener('click', () => {
     candles.forEach((c, i) => setTimeout(() => c.classList.remove('lit'), i*100));
     wishButton.disabled = true;
-    candleStatus.textContent = 'Wish deployed into the universe.';
+    candleStatus.textContent = 'Wish deployed after the attack on titan';
     addBurst(innerWidth/2, Math.min(innerHeight*.55, wishButton.getBoundingClientRect().top), 180, 9);
   });
 
@@ -279,7 +279,7 @@
   finaleButton.addEventListener('click', () => {
     finaleMode = true;
     document.body.classList.add('finale-active');
-    finaleMessage.textContent = 'HAPPY BIRTHDAY. Go be annoyingly difficult to outshine this year.';
+    finaleMessage.textContent = 'HAPPY BIRTHDAY. You are doing amazing in life and you will keep achieving greatness, everyone is proud of you RIGHT GUYSSS???.';
     addBurst(innerWidth*.2,innerHeight*.25,180,10);
     addBurst(innerWidth*.5,innerHeight*.18,200,11);
     addBurst(innerWidth*.8,innerHeight*.25,180,10);
